@@ -1,6 +1,3 @@
-//Validaate card numbers using Luhn’s Algorithm
-
-
 #include <cs50.h>
 #include <stdio.h>
 
@@ -15,6 +12,7 @@ int main(void)
     long checksum;
     bool flag =
         false; // used for setting a flag if it is the digit that needs to be multiplied or not
+    void validate(long checksum, long card_identifier);
 
     do
     {
@@ -62,6 +60,11 @@ int main(void)
 
     checksum = product_of_not_multiplied + product_of_multiplied;
 
+    validate(checksum, card_identifier);
+}
+
+void validate(long checksum, long card_identifier)
+{
     if (checksum % 10 == 0 &&
         (card_identifier / 1000000000000000 == 4 || card_identifier / 1000000000000 == 4))
     {
