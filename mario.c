@@ -4,14 +4,19 @@
 int main(void)
 {
     int height;
+    void make_mario_blocks(int height);
+
     do
     {
         height = get_int("Height: ");
     }
     while (height < 1 || height > 8);
 
-    int max_blocks = 8;
-    int empty_blocks = max_blocks - height;
+    make_mario_blocks(height);
+}
+
+void make_mario_blocks(int height)
+{
     int left_spaces = height - 1;
 
     for (int i = 1; i <= height; i++)
