@@ -1,2 +1,2 @@
 # CS50x
-Problems solved while taking CS50
+Problems solved while taking CS50x online course made by Harvard Univeristy.
