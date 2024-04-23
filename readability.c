@@ -23,33 +23,10 @@ int main(void)
 
     counter(length, text);
 
-/*     printf("number of letters = %f\n", number_of_letters);
-    printf("number of words = %f\n", number_of_words);
-    printf("number of sentences = %f \n", number_of_sentences); */
-
     float index = return_index(number_of_letters, number_of_words, number_of_sentences);
 
     print_grade(index);
 
-    //printf("%f", index_x);
-
-/*     if(index(number_of_letters, number_of_words, number_of_sentences) < 1){
-        printf("less than 1");
-    } */
-
-    //printf("%i", length);
-
-
-    // Count the number of letters, words, and sentences in the text
-    // I  want to skip empty spaces while counting words and sentences
-    // word is considered to be any sequence of characters (to count number of words you can maybe count spaces. For example count spaces +1)
-
-    // I  can use isspace from sc50.h to check if it is alphabetical to handle empty spaces in string
-    // I  can use ispunct from sc50.h to check if it is punctuation to handle empty spaces in string
-
-    // I assume I would count any period, exclamation point, period or question marks as 1 sentence???
-
-    // Print the grade level
 }
 
 void counter(int length, string text)
@@ -87,12 +64,10 @@ float return_index(float x, float y, float z)
 
     // where L is the average number of letters per 100 words in the text,
     float L = (x / y) * 100;
-/*     printf("L = %f\n", L);
- */
+
     //and S is the average number of sentences per 100 words in the text.
     float S = (z / y) * 100;
-/*     printf("S = %f\n", S);
- */
+
 
     // index = 0.0588 * L - 0.296 * S - 15.8
 
